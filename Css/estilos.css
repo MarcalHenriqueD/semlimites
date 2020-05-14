@@ -1,0 +1,200 @@
+/* Reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://wallpaperaccess.com/full/169950.jpg');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+  }
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 24px;
+    }
+  }
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    background-color: transparent; 
+    font-size: 16px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    font-size: 16px;
+  }
+  
+  .menu a {
+    color: rgb(41, 190, 190);
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 2s, color 2s;
+    z-index: 1;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: rgb(41, 190, 190);
+    color: whitesmoke;
+    text-shadow: 0px 0px 10px whitesmoke;
+  }
+
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none; 
+  }
+  
+  a {
+    color: purple;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .titulo {
+    transform: scale(0.3) translateY(50vh);
+    opacity: 0;
+
+    animation: linear 2s animacaotitulo forwards, 5s linear 2s rotatitulo infinite alternate;
+  }
+
+  @keyframes animacaotitulo {
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotatitulo {
+    0%{
+      transform: scale(1) rotate(0);
+    }
+    25% {
+      transform: scale(1.3) rotate(45deg);
+    }
+    50% {
+      transform: scale(1.3) rotate(-45deg);
+    }
+    100% {
+      transform: scale(1.3) rotate(45deg);
+    }
+  }
+  .site-subtitle,
+  .site-title {
+    text-align: center;
+  }
+  
+  .site-title{
+    color: rgb(41, 190, 190);
+    text-shadow: 4px 4px 3px black;
+    font-family: 'Mark Script', cursive;
+  }
+
+  .site-subtitle {
+    font-style: italic;
+    font-family: 'Permanent Marker', cursive;
+    background-image: url('https://ak.picdn.net/shutterstock/videos/22136512/thumb/1.jpg');
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 20px 5px rgb(46, 175, 175);
+  }
+
+  .portfolio {
+    background-image: url('https://images5.alphacoders.com/372/thumb-1920-372649.jpg');
+    background-size: 100% 100%;
+    padding: 2em;
+    color: rgb(202, 67, 26);
+    text-shadow: 1.1px 1.1px 3px black;
+    min-height: 100vh;
+  }
+
+  .contato {
+    background-image: linear-gradient(to bottom right, rgb(47, 47, 214), rgb(20, 219, 219));
+  }
+
+  .grid-icons {
+    background-image: url('https://i.pinimg.com/originals/f6/26/d8/f626d80428d65ab041bbb90fe706ce01.jpg');
+    background-image: url('https://ak.picdn.net/shutterstock/videos/22136512/thumb/1.jpg');
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    text-align: center
+  }
+
+  .grid-icons a {
+    transition: text-decoration 1s, text-shadow 1s;
+  }
+
+  .grid-icons a:active,
+  .grid-icons a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px whitesmoke;
+  }
+
+  .contato h2,
+  .portfolio h2 {
+    font-family: 'Mark Script', cursive;
+    font-style: italic;
+    color: rgb(41, 190, 190);
+    text-shadow: 2px 2px 3px black;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 380px 380px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 380px);
+      justify-content: center;
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 350px;
+    width: 380px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 10%;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.3) rotate(45deg);
+  }
+
+  .caixao {
+    display: none;
+  }
